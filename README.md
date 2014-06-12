@@ -1,7 +1,7 @@
 check_nat64
 ===========
 
-This is Icinga/Nagios plugin for statefull NAT64 service monitoring. It
+This is Icinga/Nagios plugin for stateful NAT64 service monitoring. It
 creates a TCP session from monitoring station IPv6 address to its own IPv4
 address.
 
@@ -22,9 +22,9 @@ addresses **192.0.2.94** and **2001:db8::94**. NAT64 uses IPv6 prefix
 	| parent       |------IPv6------------+
 	| 2001:db8::94 |                      V
 	|              |           +---------------------+
-        |              |           | 64:ff9b::192.0.2.94 |
+	|              |           | 64:ff9b::192.0.2.94 |
 	+--------------+           |        NAT64        |
-        | child        |           |    198.51.100.34    |
+	| child        |           |    198.51.100.34    |
 	| 192.0.2.94   |           +---------------------+
 	|              |                      |
 	|              |<-----IPv4------------+
@@ -33,12 +33,12 @@ addresses **192.0.2.94** and **2001:db8::94**. NAT64 uses IPv6 prefix
 Requirements for monitoring server:
 
 * It must have IPv4 and IPv6 connectivity.
-* It must be rechable over IPv4 from the NAT64 service.
+* It must be reachable over IPv4 from the NAT64 service.
 
 Installation
 ------------
 
-There are no library depenencies. To compile the plugin use the make file
+There are no library dependencies. To compile the plug-in use the make file
 included with the source code:
 
 	$ make
